@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Callcriteria</title>
+        <link rel="stylesheet" href="build/styles.css">
+    </head>
+    <body>
+        <div id='wrapper'>
+        	<div class='wrapper-body'>
+
+        	<!-- header start -->
+        		<div class='header'>
+     				<div class='menu'>
+     					<div class='menu-item icon'></div>
+     					<div class='menu-item docum'><a href="#content">Web Service Interface Document</a></div>
+     					<div class='menu-item'><a href="#introduction">Introduction</a></div>
+     					<div class='menu-item'><a href="#data">Posting data</a></div>
+     					<div class='menu-item'><a href="#inputs">Inputs</a></div>
+     					<div class='menu-item'><a href="#audios">Audios</a></div>
+     					<div class='menu-item'><a href="#other-data">OtherDataItem</a></div>
+     					<div class='menu-item'><a href="#schools">Schools</a></div>
+     				</div>
+        		</div>
+        	<!-- header end -->
+
+        	<!-- content start -->
+        		<div class='content' id='content'>
+
+        		<!-- content-header start -->
+        			<div class='content-header'>
+        				<div class='left'>
+        					<div class=logo></div>
+        					<div class='text-title'>Web Service Interface Document</div>
+        				</div>
+        				<div class='right'>
+        					<div class='date'>6/25/2015</div>
+        					<div class='date'>Rev 2 12/10/2015</div>
+        					<div class='date'>Rev 3 11/30/2016</div>
+        					<div class='date'>Rev 4 07/10/2017</div>
+        				</div>
+        			</div>
+        		<!-- content-header end -->
+
+        			<!-- section 1 start -->
+        			<div class='section'>
+        				<div class='section-name' id='introduction'>Introduction</div>
+        				<div class='section-name'>My Data</div>
+        				<p class='section-text'>Use the following to populate the data fields &lt;appname&gt;, &lt;apikey&gt; and &lt;scorecard&gt;. The Scorecard Description is there to show which scorecard the ID belongs to.</p>
+
+        				<p class='section-text'>The web service for Call Criteria is used to send records individually to our system without the need to upload data and/or audio files and/or school or referential data.</p>
+
+						<p class='section-text'>There are multiple services available. These can be found at the URL: <a href="http://app.callcriteria.com/callcriteriaAPI.svc/json/help">http://app.callcriteria.com/callcriteriaAPI.svc/json/help</a></p>
+
+						<!-- table start -->
+						<div class='table'>
+							<div class='table-header'>
+								<div class='table-cell uri'>uri</div>
+								<div class='table-cell method'>method</div>
+								<div class='table-cell description'>description</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell uri'>AddExistingSchool</div>
+								<div class='table-cell method'>POST</div>
+								<div class='table-cell description'>Add more data to an existing record after it has been received and processed.</div>
+							</div>
+						</div>
+						<!-- table end -->
+
+						<!-- table start -->
+						<div class='table'>
+							<div class='table-header'>
+								<div class='table-cell uri'>uri</div>
+								<div class='table-cell method'>method</div>
+								<div class='table-cell description'>description</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell uri'>GetAllRecords</div>
+								<div class='table-cell method'>POST</div>
+								<div class='table-cell description'>Returns all records associated with a specific scorecard</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell uri'>GetCallsLoaded</div>
+								<div class='table-cell method'>POST</div>
+								<div class='table-cell description'>Service at http://app.callcriteria.com/callcriteriaAPI.svc/json/GetCallsLoaded</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell uri'>GetRecord</div>
+								<div class='table-cell method'>POST</div>
+								<div class='table-cell description'>Service at http://app.callcriteria.com/callcriteriaAPI.svc/json/GetRecord</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell uri'>GetRecordID</div>
+								<div class='table-cell method'>POST</div>
+								<div class='table-cell description'>Service at http://app.callcriteria.com/callcriteriaAPI.svc/json/GetRecordID</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell uri'>getScore</div>
+								<div class='table-cell method'>POST</div>
+								<div class='table-cell description'>Service at http://app.callcriteria.com/callcriteriaAPI.svc/json/getScore</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell uri'>GetScorecardRecord</div>
+								<div class='table-cell method'>POST</div>
+								<div class='table-cell description'>Service at http://app.callcriteria.com/callcriteriaAPI.svc/json/GetScorecardRecord</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell uri'>GetScorecardRecordID</div>
+								<div class='table-cell method'>POST</div>
+								<div class='table-cell description'>Service at http://app.callcriteria.com/callcriteriaAPI.svc/json/GetScorecardRecordID</div>
+							</div>
+						</div>
+						<!-- table end -->
+						<p class='section-text'>Clicking on the POST method above will allow you to see how each items can be called and how the returned data can be interpreted.</p>
+        			</div>
+        			<!-- section 1 end -->
+
+        			<!-- section 2 start -->
+        			<div class='section'>
+        				<div class='section-name' id='data'>Posting Data</div>
+
+        				<p class='section-text'>Once we have created an account for you, you will get a scorecards ID, an appname (name of your application within Call Criteria) and an API key. To POST data to us, you would add the appname and API key to the URL in this format:</p>
+
+        				<div class='url-box'>
+        					http://app.callcriteria.com/callcriteriaAPI.svc/json/AddRecord?<br/>appname=&lt;appname&gt;&apikey=&lt;apikey&gt;
+        				</div>
+
+        				<p class='section-text'>or</p>
+
+        				<div class='url-box'>
+        					http://app.callcriteria.com/callcriteriaAPI.svc/xml/AddRecord?<br/>appname=&lt;appname&gt;&apikey=&lt;apikey&gt;
+        				</div>
+
+        				<p class='section-text'>Post for data in either json format or XML format.  Simple change the posting URL to use json or xml as above.</p>
+
+						<p class='section-text'>Here's a sample CURL call you can use:</p>
+
+						<div class='url-box'>
+        					curl -X POST -H "Content-Type: application/json" -d '{"api_key":"&lt;apikey&gt;","AGENT":"your agent name","AGENT_GROUP":"VICI01","AGENT_NAME":"37465","CALL_TIME":"2017-05-25 14:18:02","CAMPAIGN":"TSPURCA","DISPOSITION":"UPSCMB","SESSION_ID":"1495736258.24854","TIMESTAMP":<br/>"2017-05-21 15:09:20","appname":"&lt;appname&gt;","phone":"4168091355","Email":"angela@powerplusmobility.com","First_Name":"Angela",<br/>"Last_Name":"Mohan","City":"Brampton","State":"ON","Zip":"L6Y 2Z4","address":"1 Villanova road","audios":[{"audio_file":"20170525-141739_4168091355_37465-all.mp3","file_date":"2017-05-25","order":"1"},{"audio_file":"ftp://yourcompany.com/recordings/6_21_17/your_call_audio.mp3","file_date":"2017-05-25","order":"2"}],"call_date":"2017-05-25","leadid":"62701143","scorecard":"&lt;scorecard&gt;","OtherDataItems":[{"key":"order_id_1","label":"order_id_1","value":"458340"},{"key":"campaign_id_1","label":"campaign_id_1","value":"37"},{"key":"products_name_1_1","label":"products_name_1_1","value":"CC ThinSecret Pure Garcinia Cambogia Trial (CA)"},{"key":"products_price_1_1","label":"products_price_1_1","value":"2.00"},{"key":"products_name_1_2","label":"products_name_1_2","value":"CC Advanced Green Coffee 1 Bottle"},{"key":"products_price_1_2","label":"products_price_1_2","value":"24.95"},{"key":"products_price_1_3","label":"products_price_1_3","value":"49.95"},{"key":"products_name_1_3","label":"products_name_1_3","value":"CC MaxEffect Cleanse Kit"},{"key":"response_code_1","label":"response_code_1","value":"100"},{"key":"Customer Shipping Address","label":"Customer Shipping Address","value":"Angela Mohan, 1 Villanova road , Brampton, ON L6Y 2Z4"},{"key":"Total Amount Billed","label":"Total Amount Billed","value":"76.90"},{"key":"script_ID","label":"script_ID","value":"TSPURCA_script.inc"}]}' -s http://app.callcriteria.com/CallCriteriaAPI.svc/json/AddRecord?appname=&lt;appname&gt;\&apikey=&lt;apikey&gt;
+        				</div>
+        			</div>
+        			<!-- section 2 end -->
+
+        			<!-- section 3 -->
+        			<div class='section'>
+        				<div class='section-name'>AddRecord</div>
+        				<div class='section-name-sm'>Usage</div>
+        				<p class='section-text'>
+        					The following fields are available, but not required, to post data to.  If the data you are posting does not have the same fields, but you would like to use an existing field – feel free to map to that field.  If it is necessary to add fields, please contact us at <a href="support@callcriteria.com">support@callcriteria.com</a> with any concerns or comments.
+        				</p>
+        				<p class='section-text'>
+        					Online docs are available with prototypes and samples of XML and JSON posts at <a href="https://app.callcriteria.com/callcriteriaAPI.svc/json/help">https://app.callcriteria.com/callcriteriaAPI.svc/json/help</a>
+        				</p>
+        			</div>
+        			<!-- section 3 end -->
+
+        			<!-- section 4 -->
+        			<div class='section'>
+        				<div class='section-name' id='inputs'>Inputs</div>
+        				<div class='section-name-sm'>AddRecord Fields</div>
+        				
+        				<!-- table start -->
+						<div class='table'>
+							<div class='table-header'>
+								<div class='table-cell name'>Field Name</div>
+								<div class='table-cell type'>Type</div>
+								<div class='table-cell size'>Size</div>
+								<div class='table-cell required'>Required</div>
+								<div class='table-cell comments'>Comments/Notes</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>SESSION_ID</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>255</div>
+								<div class='table-cell required'>Yes</div>
+								<div class='table-cell comments'>The audio files will get renamed to the records’s ID.mp3</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>AGENT</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>255</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Your agent’s name or ID. Used to sort and filter on the dashboard.</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>AGENT_NAME</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>255</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Can be the agent’s full name instead of their ID.  Not used to sort or filter.</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>DISPOSITION</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>255</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Result of the call.</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>CAMPAIGN</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>255</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Is used as a filter on the dashboard.</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>ANI</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>50</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>We primarily use phone – left here as a legacy data element</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>DNIS</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>50</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>We primarily use phone – left here as a legacy data elemen</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>TIMESTAMPN</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>255</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Full date and time the call was made – display only.</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>TALK_TIME</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'></div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Talk time of the call – stored as 1/1/1899 + call length -- but is a string, so anything works!</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>CALL_TIME</div>
+								<div class='table-cell type'>Date/Time</div>
+								<div class='table-cell size'></div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Time of the call – stored as 12/30/1899 + call length - 1899-12-30 00:01:03.000 for example.</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>HANDLE_TIME</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'></div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Handle time of the call – stored as 1/1/1899 + call length -- but is a string, so anything works!</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>CALL_TYPE</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>255</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Type of Call</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>LIST_NAME</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>255</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>List from which the call was originated</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>leadid</div>
+								<div class='table-cell type'>Float</div>
+								<div class='table-cell size'></div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>ID number from source system. </div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>AGENT_GROUP</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>255</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Group/Supervisor owning the agent.  Can be filtered on dashboard.</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>HOLD_TIME</div>
+								<div class='table-cell type'>Date/Time</div>
+								<div class='table-cell size'></div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Hold time of call</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>Email</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>255</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Email of lead</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>City</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>255</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>City of Lead</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>State</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>255</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>State of Lead</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>Zip</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>20</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Zip/postal code of lead</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>Datacapturekey</div>
+								<div class='table-cell type'>Float</div>
+								<div class='table-cell size'></div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Another lead ID</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>Datacapture</div>
+								<div class='table-cell type'>Float</div>
+								<div class='table-cell size'></div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Another lead ID</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>Status</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>255</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Lead status</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>Program</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>255</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Program lead was interested in</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>Datacapture_status</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>255</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Lead ID status</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>num_of_schools</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>255</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Not used – moved to school object</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>EducationLevel</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>255</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Lead’s level of education</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>HighSchoolGradYear</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>255</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Lead’s GED/HS Grad year</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>DegreeStartTimeframe</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>255</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Lead’s desired start time</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>appname</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>50</div>
+								<div class='table-cell required'>Yes</div>
+								<div class='table-cell comments'>Appname is provided to you when you signed up with Call Criteria.  Every post must have an Appname associated with it.</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>First_Name</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>150</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Lead’s first name</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>Last_Name</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>150</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Lead’s last name</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>address</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>200</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Lead’s street address</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>phone</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>50</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Lead’s phone</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>sort_order</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>10</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Insert lower numbers to have these reviewed earlier</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>scorecard</div>
+								<div class='table-cell type'>Int</div>
+								<div class='table-cell size'></div>
+								<div class='table-cell required'>Yes</div>
+								<div class='table-cell comments'>Use the integer provided to assign this record directly to a specific scorecard</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>call_date</div>
+								<div class='table-cell type'>Date</div>
+								<div class='table-cell size'></div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Date the call/record was created</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>Citizenship</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>100</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Lead’s citizenship</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>Military</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>100</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Lead’s Military</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>profile_id</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>100</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Lead’s internal profile ID</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>Schools</div>
+								<div class='table-cell type'>Many to one object</div>
+								<div class='table-cell size'></div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Add as many schools objects as needed</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>audios</div>
+								<div class='table-cell type'>Many to one object</div>
+								<div class='table-cell size'></div>
+								<div class='table-cell required'>Yes</div>
+								<div class='table-cell comments'>Add as many audio files as needed</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>OtherDataItems</div>
+								<div class='table-cell type'>Many to one object</div>
+								<div class='table-cell size'></div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Add as many “other” data items – see below</div>
+							</div>
+						</div>
+						<!-- table end -->
+        			</div>
+        			<!-- section 4 end -->
+
+        			<!-- section 5 -->
+        			<div class='section'>
+        				<div class='section-name' id='audios'>Audios (0 to n AudioFile objects)</div>
+        				<div class='section-name-sm'>AudioFile Object</div>
+        				
+        				<!-- table start -->
+						<div class='table'>
+							<div class='table-header'>
+								<div class='table-cell name'>Field Name</div>
+								<div class='table-cell type'>Type</div>
+								<div class='table-cell size'>Size</div>
+								<div class='table-cell required'>Required</div>
+								<div class='table-cell comments'>Comments/Notes</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>audio_file</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>500</div>
+								<div class='table-cell required'>Yes</div>
+								<div class='table-cell comments'>protocols are all supported.  Please contact me for other protocols</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>order</div>
+								<div class='table-cell type'>Int</div>
+								<div class='table-cell size'></div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>If you have the files in order, populate this</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>file_date</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>100</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>If you have the files in chronological order, populate this</div>
+							</div>
+						</div>
+					</div>
+					<!-- section 5 end -->
+
+					<!-- section 6 -->
+        			<div class='section'>
+        				<div class='section-name' id='other-data'>OtherDataItems (0 to n OtherData objects)</div>
+        				<div class='section-name-sm'>OtherData Object</div>
+        				
+        				<!-- table start -->
+						<div class='table'>
+							<div class='table-header'>
+								<div class='table-cell name'>Field Name</div>
+								<div class='table-cell type'>Type</div>
+								<div class='table-cell size'>Size</div>
+								<div class='table-cell required'>Required</div>
+								<div class='table-cell comments'>Comments/Notes</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>key</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>100</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Bolded value presented to our QA for data key name “Mortgage” for instance</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>value</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>100</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Data value itself “$350k” for instance</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>type</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>100</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Default to “string”  -- more values in the future.</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>school</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>100</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Post if this data element is directly related to a specific school.</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>label</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>2000</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Description if needed for the key</div>
+							</div>
+						</div>
+					</div>
+					<!-- section 6 end -->
+
+					<!-- section 7 -->
+        			<div class='section'>
+        				<div class='section-name' id='schools'>Schools (0 to n SchoolItem objects)</div>
+        				<div class='section-name-sm'>SchoolItem Object</div>
+        				
+        				<!-- table start -->
+						<div class='table'>
+							<div class='table-header'>
+								<div class='table-cell name'>Field Name</div>
+								<div class='table-cell type'>Type</div>
+								<div class='table-cell size'>Size</div>
+								<div class='table-cell required'>Required</div>
+								<div class='table-cell comments'>Comments/Notes</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>School</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>100</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>School name</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>College</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>200</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>College name</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>DegreeOfInterest</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>100</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Lead’s degree interest</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>AOI1</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>200</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Lead’s area of interest 1</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>AOI2</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>100</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Lead’s area of interest 2</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>L1_SubjectName</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>100</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Lead’s subject interest 1</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>L2_SubjectName</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>100</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Lead’s subject interest 2</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>Modality</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>100</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Lead’s modality – online/campus/both</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>Portal</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>100</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Lead’s portal source</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell name'>TCPA</div>
+								<div class='table-cell type'>String</div>
+								<div class='table-cell size'>8000</div>
+								<div class='table-cell required'>No</div>
+								<div class='table-cell comments'>Lead’s TCPA</div>
+							</div>
+						</div>
+					</div>
+					<!-- section 7 end -->
+
+					<!-- section 8 -->
+        			<div class='section'>
+        				<div class='section-name-sm'>Revision History:</div>
+        				<p class='section-text'>
+        					Rev 2 – 12/10/2015 – Added https:// protocol for posting.<br/>
+							Rev 3 – 11/30/2016 – Corrected case for the posting values and added new values for schools object<br/>
+							Rev 4 - 7/10/2017 - Converted to REST instead of SOAP calls, added online version, added CURL call
+        				</p>
+        			</div>
+        			<!-- section 8 end -->
+        		</div>
+        	<!-- contend end -->
+        	</div>
+        </div>
+    </body>
+</html>
