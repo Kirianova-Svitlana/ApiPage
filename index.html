@@ -48,9 +48,108 @@
         				<div class='section-name'>My Data</div>
         				<p class='section-text'>Use the following to populate the data fields &lt;appname&gt;, &lt;apikey&gt; and &lt;scorecard&gt;. The Scorecard Description is there to show which scorecard the ID belongs to.</p>
 
+        				<!-- table start -->
+						<div class='table'>
+							<div class='table-header'>
+								<div class='table-cell appname'>APPNAME</div>
+								<div class='table-cell appikey'>APIKEY</div>
+								<div class='table-cell scorecard'>SCORECARD</div>
+								<div class='table-cell scorecard-desc'>SCORECARD DESCRIPTION</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell appname'>acm</div>
+								<div class='table-cell appikey'>
+									58183c94-a0c1-410c-9f7c-e0e5c8e3ecea
+								</div>
+								<div class='table-cell scorecard'>88</div>
+								<div class='table-cell scorecard-desc'>ACM v2.3</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell appname'>acm</div>
+								<div class='table-cell appikey'>
+									58183c94-a0c1-410c-9f7c-e0e5c8e3ecea
+								</div>
+								<div class='table-cell scorecard'>292</div>
+								<div class='table-cell scorecard-desc'>ACM Warm Transfer</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell appname'>DMS</div>
+								<div class='table-cell appikey'>
+									e39593b1-7d11-41c4-9241-9f2350bee570
+								</div>
+								<div class='table-cell scorecard'>336</div>
+								<div class='table-cell scorecard-desc'>DMS MTG - Refinance</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell appname'>DMS</div>
+								<div class='table-cell appikey'>
+									e39593b1-7d11-41c4-9241-9f2350bee570
+								</div>
+								<div class='table-cell scorecard'>344</div>
+								<div class='table-cell scorecard-desc'>DMS MTG - Reverse</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell appname'>DMS</div>
+								<div class='table-cell appikey'>
+									39593b1-7d11-41c4-9241-9f2350bee570
+								</div>
+								<div class='table-cell scorecard'>390</div>
+								<div class='table-cell scorecard-desc'>DMS 3.0</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell appname'>DMS</div>
+								<div class='table-cell appikey'>
+									e39593b1-7d11-41c4-9241-9f2350bee570
+								</div>
+								<div class='table-cell scorecard'>549</div>
+								<div class='table-cell scorecard-desc'>	DMS MTG 2.0 - Refinance</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell appname'>edufficient</div>
+								<div class='table-cell appikey'>
+									25f0bee0-33b6-4d7b-8942-240139e52a4c
+								</div>
+								<div class='table-cell scorecard'>116</div>
+								<div class='table-cell scorecard-desc'>Ancora Web Compliance</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell appname'>edufficient</div>
+								<div class='table-cell appikey'>
+									25f0bee0-33b6-4d7b-8942-240139e52a4c
+								</div>
+								<div class='table-cell scorecard'>117</div>
+								<div class='table-cell scorecard-desc'>QUAD - Dorsey School</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell appname'>edufficient</div>
+								<div class='table-cell appikey'>
+									25f0bee0-33b6-4d7b-8942-240139e52a4c
+								</div>
+								<div class='table-cell scorecard'>205</div>
+								<div class='table-cell scorecard-desc'>QUAD - Blue Cliff College</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell appname'>edufficient</div>
+								<div class='table-cell appikey'>
+									25f0bee0-33b6-4d7b-8942-240139e52a4c
+								</div>
+								<div class='table-cell scorecard'>239</div>
+								<div class='table-cell scorecard-desc'>CEHE Web Compliance</div>
+							</div>
+							<div class='table-row'>
+								<div class='table-cell appname'>Keypath</div>
+								<div class='table-cell appikey'>
+									39412f06-0442-451d-8974-0ef4b31f80d7
+								</div>
+								<div class='table-cell scorecard'>415</div>
+								<div class='table-cell scorecard-desc'>Keypath Portal v1.0</div>
+							</div>
+						</div>
+						<!-- table end -->
+
+
         				<p class='section-text'>The web service for Call Criteria is used to send records individually to our system without the need to upload data and/or audio files and/or school or referential data.</p>
 
-						<p class='section-text'>There are multiple services available. These can be found at the URL: <a href="http://app.callcriteria.com/callcriteriaAPI.svc/json/help">http://app.callcriteria.com/callcriteriaAPI.svc/json/help</a></p>
 
 						<!-- table start -->
 						<div class='table'>
@@ -60,9 +159,13 @@
 								<div class='table-cell description'>description</div>
 							</div>
 							<div class='table-row'>
-								<div class='table-cell uri'>AddExistingSchool</div>
-								<div class='table-cell method'>POST</div>
-								<div class='table-cell description'>Add more data to an existing record after it has been received and processed.</div>
+								<div class='table-cell uri'>
+									<a href="#test">AddRecord</a>
+								</div>
+								<div class='table-cell method'>
+									<a href="http://app.callcriteria.com/callcriteriaAPI.svc/json/help/operations/AddRecord">POST</a>
+								</div>
+								<div class='table-cell description'>Use this to send us all data necessary to receive calls and meta-data associated with the call</div>
 							</div>
 						</div>
 						<!-- table end -->
@@ -76,48 +179,62 @@
 							</div>
 							<div class='table-row'>
 								<div class='table-cell uri'>GetAllRecords</div>
-								<div class='table-cell method'>POST</div>
+								<div class='table-cell method'>
+									<a href="http://app.callcriteria.com/callcriteriaAPI.svc/json/help/operations/GetAllRecords">POST</a>
+								</div>
 								<div class='table-cell description'>Returns all records associated with a specific scorecard</div>
 							</div>
 							<div class='table-row'>
 								<div class='table-cell uri'>GetCallsLoaded</div>
-								<div class='table-cell method'>POST</div>
+								<div class='table-cell method'>
+									<a href="http://app.callcriteria.com/callcriteriaAPI.svc/json/help/operations/GetCallsLoaded">POST</a>
+								</div>
 								<div class='table-cell description'>Service at http://app.callcriteria.com/callcriteriaAPI.svc/json/GetCallsLoaded</div>
 							</div>
 							<div class='table-row'>
 								<div class='table-cell uri'>GetRecord</div>
-								<div class='table-cell method'>POST</div>
+								<div class='table-cell method'>
+									<a href="http://app.callcriteria.com/callcriteriaAPI.svc/json/help">POST</a>
+								</div>
 								<div class='table-cell description'>Service at http://app.callcriteria.com/callcriteriaAPI.svc/json/GetRecord</div>
 							</div>
 							<div class='table-row'>
 								<div class='table-cell uri'>GetRecordID</div>
-								<div class='table-cell method'>POST</div>
+								<div class='table-cell method'>
+									<a href="http://app.callcriteria.com/callcriteriaAPI.svc/json/help">POST</a>
+								</div>
 								<div class='table-cell description'>Service at http://app.callcriteria.com/callcriteriaAPI.svc/json/GetRecordID</div>
 							</div>
 							<div class='table-row'>
 								<div class='table-cell uri'>getScore</div>
-								<div class='table-cell method'>POST</div>
+								<div class='table-cell method'>
+									<a href="http://app.callcriteria.com/callcriteriaAPI.svc/json/help">POST</a>
+								</div>
 								<div class='table-cell description'>Service at http://app.callcriteria.com/callcriteriaAPI.svc/json/getScore</div>
 							</div>
 							<div class='table-row'>
 								<div class='table-cell uri'>GetScorecardRecord</div>
-								<div class='table-cell method'>POST</div>
+								<div class='table-cell method'>
+									<a href="http://app.callcriteria.com/callcriteriaAPI.svc/json/help">POST</a>
+								</div>
 								<div class='table-cell description'>Service at http://app.callcriteria.com/callcriteriaAPI.svc/json/GetScorecardRecord</div>
 							</div>
 							<div class='table-row'>
 								<div class='table-cell uri'>GetScorecardRecordID</div>
-								<div class='table-cell method'>POST</div>
+								<div class='table-cell method'>
+									<a href="http://app.callcriteria.com/callcriteriaAPI.svc/json/help">POST</a>
+								</div>
 								<div class='table-cell description'>Service at http://app.callcriteria.com/callcriteriaAPI.svc/json/GetScorecardRecordID</div>
 							</div>
 						</div>
 						<!-- table end -->
-						<p class='section-text'>Clicking on the POST method above will allow you to see how each items can be called and how the returned data can be interpreted.</p>
+						<p class='section-text' id='test'>Clicking on the POST method above will allow you to see how each items can be called and how the returned data can be interpreted.</p>
         			</div>
         			<!-- section 1 end -->
 
         			<!-- section 2 start -->
-        			<div class='section'>
-        				<div class='section-name' id='data'>Posting Data</div>
+        			<div class='section' id='data'>
+        				<div class='section-name'>Posting Data</div>
 
         				<p class='section-text'>Once we have created an account for you, you will get a scorecards ID, an appname (name of your application within Call Criteria) and an API key. To POST data to us, you would add the appname and API key to the URL in this format:</p>
 
@@ -146,7 +263,7 @@
         				<div class='section-name'>AddRecord</div>
         				<div class='section-name-sm'>Usage</div>
         				<p class='section-text'>
-        					The following fields are available, but not required, to post data to.  If the data you are posting does not have the same fields, but you would like to use an existing field – feel free to map to that field.  If it is necessary to add fields, please contact us at <a href="support@callcriteria.com">support@callcriteria.com</a> with any concerns or comments.
+        					The following fields are available, but not required, to post data to.  If the data you are posting does not have the same fields, but you would like to use an existing field – feel free to map to that field.  If it is necessary to add fields, please contact us at <a href="Stace@CallCriteria.com">Stace@CallCriteria.com</a> with any concerns or comments.
         				</p>
         				<p class='section-text'>
         					Online docs are available with prototypes and samples of XML and JSON posts at <a href="https://app.callcriteria.com/callcriteriaAPI.svc/json/help">https://app.callcriteria.com/callcriteriaAPI.svc/json/help</a>
@@ -344,34 +461,6 @@
 								<div class='table-cell comments'>Lead ID status</div>
 							</div>
 							<div class='table-row'>
-								<div class='table-cell name'>num_of_schools</div>
-								<div class='table-cell type'>String</div>
-								<div class='table-cell size'>255</div>
-								<div class='table-cell required'>No</div>
-								<div class='table-cell comments'>Not used – moved to school object</div>
-							</div>
-							<div class='table-row'>
-								<div class='table-cell name'>EducationLevel</div>
-								<div class='table-cell type'>String</div>
-								<div class='table-cell size'>255</div>
-								<div class='table-cell required'>No</div>
-								<div class='table-cell comments'>Lead’s level of education</div>
-							</div>
-							<div class='table-row'>
-								<div class='table-cell name'>HighSchoolGradYear</div>
-								<div class='table-cell type'>String</div>
-								<div class='table-cell size'>255</div>
-								<div class='table-cell required'>No</div>
-								<div class='table-cell comments'>Lead’s GED/HS Grad year</div>
-							</div>
-							<div class='table-row'>
-								<div class='table-cell name'>DegreeStartTimeframe</div>
-								<div class='table-cell type'>String</div>
-								<div class='table-cell size'>255</div>
-								<div class='table-cell required'>No</div>
-								<div class='table-cell comments'>Lead’s desired start time</div>
-							</div>
-							<div class='table-row'>
 								<div class='table-cell name'>appname</div>
 								<div class='table-cell type'>String</div>
 								<div class='table-cell size'>50</div>
@@ -426,20 +515,6 @@
 								<div class='table-cell size'></div>
 								<div class='table-cell required'>No</div>
 								<div class='table-cell comments'>Date the call/record was created</div>
-							</div>
-							<div class='table-row'>
-								<div class='table-cell name'>Citizenship</div>
-								<div class='table-cell type'>String</div>
-								<div class='table-cell size'>100</div>
-								<div class='table-cell required'>No</div>
-								<div class='table-cell comments'>Lead’s citizenship</div>
-							</div>
-							<div class='table-row'>
-								<div class='table-cell name'>Military</div>
-								<div class='table-cell type'>String</div>
-								<div class='table-cell size'>100</div>
-								<div class='table-cell required'>No</div>
-								<div class='table-cell comments'>Lead’s Military</div>
 							</div>
 							<div class='table-row'>
 								<div class='table-cell name'>profile_id</div>

@@ -202,6 +202,10 @@
         letter-spacing: normal;
         text-align: left;
         color: #7e8386; }
+        .content .section .table .table-header .table-cell a,
+        .content .section .table .table-row .table-cell a {
+          text-decoration: none;
+          color: #182128; }
         .content .section .table .table-header .table-cell.uri,
         .content .section .table .table-row .table-cell.uri {
           width: 20%;
@@ -211,6 +215,13 @@
         .content .section .table .table-row .table-cell.method {
           width: 10%;
           border-right: 1px solid #f2f2f2; }
+          .content .section .table .table-header .table-cell.method a,
+          .content .section .table .table-row .table-cell.method a {
+            color: #149bdf;
+            text-decoration: none; }
+            .content .section .table .table-header .table-cell.method a:visited,
+            .content .section .table .table-row .table-cell.method a:visited {
+              background-color: #f2f2f2; }
         .content .section .table .table-header .table-cell.description,
         .content .section .table .table-row .table-cell.description {
           width: 70%; }
@@ -233,6 +244,21 @@
         .content .section .table .table-header .table-cell.comments,
         .content .section .table .table-row .table-cell.comments {
           width: 51%; }
+        .content .section .table .table-header .table-cell.appname,
+        .content .section .table .table-row .table-cell.appname {
+          width: 14%;
+          border-right: 1px solid #f2f2f2; }
+        .content .section .table .table-header .table-cell.appikey,
+        .content .section .table .table-row .table-cell.appikey {
+          width: 40%;
+          border-right: 1px solid #f2f2f2; }
+        .content .section .table .table-header .table-cell.scorecard,
+        .content .section .table .table-row .table-cell.scorecard {
+          width: 18%;
+          border-right: 1px solid #f2f2f2; }
+        .content .section .table .table-header .table-cell.scorecard-desc,
+        .content .section .table .table-row .table-cell.scorecard-desc {
+          width: 25%; }
     .content .section .table .table-row .table-cell {
       color: #182128;
       font-size: 14px; }

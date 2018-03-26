@@ -124,6 +124,10 @@
 					letter-spacing: normal;
 					text-align: left;
 					color: $table-days-name-color;
+					a {
+						text-decoration: none;
+						color: $row-title;
+					}
 					// text-transform: capitalize;
 					&.uri {
 						width: 20%;
@@ -133,6 +137,13 @@
 					&.method {
 						width: 10%;
 						border-right: 1px solid $xlight-grey;
+						a{
+							color: $header;
+							text-decoration: none;
+							&:visited {
+							    background-color: $xlight-grey;
+							}
+						}
 					}
 					&.description {
 						width: 70%;
@@ -155,6 +166,21 @@
 					}
 					&.comments {
 						width: 51%;
+					}
+					&.appname {
+						width: 14%;
+						border-right: 1px solid $xlight-grey;
+					}
+					&.appikey {
+						width: 40%;
+						border-right: 1px solid $xlight-grey;
+					}
+					&.scorecard {
+						width: 18%;
+						border-right: 1px solid $xlight-grey;
+					}
+					&.scorecard-desc {
+						width: 25%;
 					}
 				}
 			}
