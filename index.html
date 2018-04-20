@@ -178,6 +178,13 @@
 								<div class='table-cell description'>description</div>
 							</div>
 							<div class='table-row'>
+								<div class='table-cell uri'>GetRecord</div>
+								<div class='table-cell method'>
+									<a href="http://app.callcriteria.com/callcriteriaAPI.svc/json/help">POST</a>
+								</div>
+								<div class='table-cell description'>Service at http://app.callcriteria.com/callcriteriaAPI.svc/json/GetRecord</div>
+							</div>
+							<div class='table-row'>
 								<div class='table-cell uri'>GetAllRecords</div>
 								<div class='table-cell method'>
 									<a href="http://app.callcriteria.com/callcriteriaAPI.svc/json/help/operations/GetAllRecords">POST</a>
@@ -192,13 +199,6 @@
 								<div class='table-cell description'>Service at http://app.callcriteria.com/callcriteriaAPI.svc/json/GetCallsLoaded</div>
 							</div>
 							<div class='table-row'>
-								<div class='table-cell uri'>GetRecord</div>
-								<div class='table-cell method'>
-									<a href="http://app.callcriteria.com/callcriteriaAPI.svc/json/help">POST</a>
-								</div>
-								<div class='table-cell description'>Service at http://app.callcriteria.com/callcriteriaAPI.svc/json/GetRecord</div>
-							</div>
-							<div class='table-row'>
 								<div class='table-cell uri'>GetRecordID</div>
 								<div class='table-cell method'>
 									<a href="http://app.callcriteria.com/callcriteriaAPI.svc/json/help">POST</a>
@@ -211,13 +211,6 @@
 									<a href="http://app.callcriteria.com/callcriteriaAPI.svc/json/help">POST</a>
 								</div>
 								<div class='table-cell description'>Service at http://app.callcriteria.com/callcriteriaAPI.svc/json/getScore</div>
-							</div>
-							<div class='table-row'>
-								<div class='table-cell uri'>GetScorecardRecord</div>
-								<div class='table-cell method'>
-									<a href="http://app.callcriteria.com/callcriteriaAPI.svc/json/help">POST</a>
-								</div>
-								<div class='table-cell description'>Service at http://app.callcriteria.com/callcriteriaAPI.svc/json/GetScorecardRecord</div>
 							</div>
 							<div class='table-row'>
 								<div class='table-cell uri'>GetScorecardRecordID</div>
@@ -641,95 +634,8 @@
 					</div>
 					<!-- section 6 end -->
 
-					<!-- section 7 -->
-        			<div class='section'>
-        				<div class='section-name' id='schools'>Schools (0 to n SchoolItem objects)</div>
-        				<div class='section-name-sm'>SchoolItem Object</div>
-        				
-        				<!-- table start -->
-						<div class='table'>
-							<div class='table-header'>
-								<div class='table-cell name'>Field Name</div>
-								<div class='table-cell type'>Type</div>
-								<div class='table-cell size'>Size</div>
-								<div class='table-cell required'>Required</div>
-								<div class='table-cell comments'>Comments/Notes</div>
-							</div>
-							<div class='table-row'>
-								<div class='table-cell name'>School</div>
-								<div class='table-cell type'>String</div>
-								<div class='table-cell size'>100</div>
-								<div class='table-cell required'>No</div>
-								<div class='table-cell comments'>School name</div>
-							</div>
-							<div class='table-row'>
-								<div class='table-cell name'>College</div>
-								<div class='table-cell type'>String</div>
-								<div class='table-cell size'>200</div>
-								<div class='table-cell required'>No</div>
-								<div class='table-cell comments'>College name</div>
-							</div>
-							<div class='table-row'>
-								<div class='table-cell name'>DegreeOfInterest</div>
-								<div class='table-cell type'>String</div>
-								<div class='table-cell size'>100</div>
-								<div class='table-cell required'>No</div>
-								<div class='table-cell comments'>Lead’s degree interest</div>
-							</div>
-							<div class='table-row'>
-								<div class='table-cell name'>AOI1</div>
-								<div class='table-cell type'>String</div>
-								<div class='table-cell size'>200</div>
-								<div class='table-cell required'>No</div>
-								<div class='table-cell comments'>Lead’s area of interest 1</div>
-							</div>
-							<div class='table-row'>
-								<div class='table-cell name'>AOI2</div>
-								<div class='table-cell type'>String</div>
-								<div class='table-cell size'>100</div>
-								<div class='table-cell required'>No</div>
-								<div class='table-cell comments'>Lead’s area of interest 2</div>
-							</div>
-							<div class='table-row'>
-								<div class='table-cell name'>L1_SubjectName</div>
-								<div class='table-cell type'>String</div>
-								<div class='table-cell size'>100</div>
-								<div class='table-cell required'>No</div>
-								<div class='table-cell comments'>Lead’s subject interest 1</div>
-							</div>
-							<div class='table-row'>
-								<div class='table-cell name'>L2_SubjectName</div>
-								<div class='table-cell type'>String</div>
-								<div class='table-cell size'>100</div>
-								<div class='table-cell required'>No</div>
-								<div class='table-cell comments'>Lead’s subject interest 2</div>
-							</div>
-							<div class='table-row'>
-								<div class='table-cell name'>Modality</div>
-								<div class='table-cell type'>String</div>
-								<div class='table-cell size'>100</div>
-								<div class='table-cell required'>No</div>
-								<div class='table-cell comments'>Lead’s modality – online/campus/both</div>
-							</div>
-							<div class='table-row'>
-								<div class='table-cell name'>Portal</div>
-								<div class='table-cell type'>String</div>
-								<div class='table-cell size'>100</div>
-								<div class='table-cell required'>No</div>
-								<div class='table-cell comments'>Lead’s portal source</div>
-							</div>
-							<div class='table-row'>
-								<div class='table-cell name'>TCPA</div>
-								<div class='table-cell type'>String</div>
-								<div class='table-cell size'>8000</div>
-								<div class='table-cell required'>No</div>
-								<div class='table-cell comments'>Lead’s TCPA</div>
-							</div>
-						</div>
-					</div>
-					<!-- section 7 end -->
 
-					<!-- section 8 -->
+					<!-- section 7 -->
         			<div class='section'>
         				<div class='section-name-sm'>Revision History:</div>
         				<p class='section-text'>
@@ -738,7 +644,7 @@
 							Rev 4 - 7/10/2017 - Converted to REST instead of SOAP calls, added online version, added CURL call
         				</p>
         			</div>
-        			<!-- section 8 end -->
+        			<!-- section 7 end -->
         		</div>
         	<!-- contend end -->
         	</div>
